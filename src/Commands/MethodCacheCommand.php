@@ -1,19 +1,18 @@
 <?php
 
-namespace Morteza Masumi\MethodCache\Commands;
+namespace MortezaMasumi\MethodCache\Commands;
 
 use Illuminate\Console\Command;
+use MortezaMasumi\MethodCache\Facades\MethodCache;
 
 class MethodCacheCommand extends Command
 {
-    public $signature = 'method-cache';
+    protected $signature = 'methodcache:flush';
 
-    public $description = 'My command';
+    protected $description = 'Flush all items cached by our cachable attribute.';
 
-    public function handle(): int
+    public function handle(): void
     {
-        $this->comment('All done');
-
-        return self::SUCCESS;
+        MethodCache::flush();
     }
 }
