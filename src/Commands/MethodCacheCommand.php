@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Morteza Masumi\MethodCache\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class MethodCacheCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'method-cache';
 
     public $description = 'My command';
 
