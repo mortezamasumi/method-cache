@@ -8,7 +8,7 @@ use MortezaMasumi\MethodCache\Contracts\HasCacheableMethods;
 
 class TestService implements HasCacheableMethods
 {
-    #[Cacheable]
+    #[Cacheable(ttl: 1, key: 'cached-method')]
     public function getUuid(): string
     {
         return Str::uuid();

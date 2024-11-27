@@ -1,16 +1,16 @@
 <?php
 
-namespace Morteza Masumi\MethodCache\Facades;
+namespace MortezaMasumi\MethodCache\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Morteza Masumi\MethodCache\MethodCache
+ * @see \MortezaMasumi\MethodCache\MethodCache
  */
 class MethodCache extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \Morteza Masumi\MethodCache\MethodCache::class;
+        return \MortezaMasumi\MethodCache\MethodCacheService::class;
     }
 }

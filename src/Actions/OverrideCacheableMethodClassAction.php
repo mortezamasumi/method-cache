@@ -23,11 +23,15 @@ class OverrideCacheableMethodClassAction
         $attribute         = $methodsToOverride->getAttributes(Cacheable::class)[0];
         $cacheableInstance = $attribute->newInstance();
 
+        $keys   = Cache::get('methodcached-keys', []);
+        $keys[] = $cacheableInstance->key;
+        Cache::forever('methodcached-keys', $keys);
+
         $methodImplementation = function ($original) use ($cacheableInstance) {
             return Cache::remember(
-                key: 'cached-method',
-                ttl: 1,
-                callback: fn() => $original,
+                key: $cacheableInstance->key,
+                ttl: $cacheableInstance->ttl,
+                callback: fn() => $original(),
             );
         };
 
@@ -37,8 +41,6 @@ class OverrideCacheableMethodClassAction
             methodNames: $methodsToOverride->name,
             implementations: $methodImplementation,
         );
-
-        dd($result['implementations']);
 
         $filePath = storage_path('framework/cache/' . $result['className'] . '.php');
         File::put($filePath, $result['content']);
