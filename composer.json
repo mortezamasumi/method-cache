@@ -17,7 +17,7 @@
     ],
     "require": {
         "php": "^8.3",
-        "mortezamasumi/method-overrider": "dev-main"
+        "mortezamasumi/method-overrider": "*"
     },
     "require-dev": {
         "laravel/pint": "^1.14",
