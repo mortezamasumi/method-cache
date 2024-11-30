@@ -12,7 +12,7 @@
  */
 
 pest()
-    ->extend(\MortezaMasumi\MethodCache\Tests\TestCase::class)
+    ->extend(\Mortezamasumi\MethodCache\Tests\TestCase::class)
     // ->use(Illuminate\Foundation\Testing\RefreshDatabase::class)
     ->in('Feature');
 

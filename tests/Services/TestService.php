@@ -1,10 +1,10 @@
 <?php
 
-namespace MortezaMasumi\MethodCache\Tests\Services;
+namespace Mortezamasumi\MethodCache\Tests\Services;
 
 use Illuminate\Support\Str;
-use MortezaMasumi\MethodCache\Attributes\Cacheable;
-use MortezaMasumi\MethodCache\Contracts\HasCacheableMethods;
+use Mortezamasumi\MethodCache\Attributes\Cacheable;
+use Mortezamasumi\MethodCache\Contracts\HasCacheableMethods;
 
 class TestService implements HasCacheableMethods
 {

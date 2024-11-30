@@ -1,9 +1,9 @@
 <?php
 
-namespace MortezaMasumi\MethodCache\Commands;
+namespace Mortezamasumi\MethodCache\Commands;
 
 use Illuminate\Console\Command;
-use MortezaMasumi\MethodCache\Facades\MethodCache;
+use Mortezamasumi\MethodCache\Facades\MethodCache;
 
 class MethodCacheCommand extends Command
 {

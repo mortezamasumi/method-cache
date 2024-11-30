@@ -17,7 +17,7 @@
     ],
     "require": {
         "php": "^8.3",
-        "mortezamasumi/method-overrider": "*"
+        "mortezamasumi/method-overrider": "dev-main"
     },
     "require-dev": {
         "laravel/pint": "^1.14",
@@ -28,12 +28,12 @@
     },
     "autoload": {
         "psr-4": {
-            "MortezaMasumi\\MethodCache\\": "src/"
+            "Mortezamasumi\\MethodCache\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "MortezaMasumi\\MethodCache\\Tests\\": "tests/"
+            "Mortezamasumi\\MethodCache\\Tests\\": "tests/"
         }
     },
     "scripts": {},

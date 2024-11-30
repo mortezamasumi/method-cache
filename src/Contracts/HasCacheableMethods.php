@@ -1,5 +1,5 @@
 <?php
 
-namespace MortezaMasumi\MethodCache\Contracts;
+namespace Mortezamasumi\MethodCache\Contracts;
 
 interface HasCacheableMethods {}

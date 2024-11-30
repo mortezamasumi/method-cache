@@ -1,6 +1,6 @@
 <?php
 
-namespace MortezaMasumi\MethodCache\Attributes;
+namespace Mortezamasumi\MethodCache\Attributes;
 
 use Attribute;
 

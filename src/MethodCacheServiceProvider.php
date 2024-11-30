@@ -1,11 +1,11 @@
 <?php
 
-namespace MortezaMasumi\MethodCache;
+namespace Mortezamasumi\MethodCache;
 
 use Illuminate\Support\ServiceProvider;
-use MortezaMasumi\MethodCache\Actions\OverrideCacheableMethodClassAction;
-use MortezaMasumi\MethodCache\Commands\MethodCacheCommand;
-use MortezaMasumi\MethodCache\Contracts\HasCacheableMethods;
+use Mortezamasumi\MethodCache\Actions\OverrideCacheableMethodClassAction;
+use Mortezamasumi\MethodCache\Commands\MethodCacheCommand;
+use Mortezamasumi\MethodCache\Contracts\HasCacheableMethods;
 
 class MethodCacheServiceProvider extends ServiceProvider
 {
@@ -25,11 +25,11 @@ class MethodCacheServiceProvider extends ServiceProvider
         $this->app->beforeResolving(function ($abstract) {
             $class = is_string($abstract) ? $abstract : get_class($abstract);
 
-            if (! class_exists($class)) {
+            if (!class_exists($class)) {
                 return;
             }
 
-            if (! in_array(HasCacheableMethods::class, class_implements($class) ?: [], true)) {
+            if (!in_array(HasCacheableMethods::class, class_implements($class) ?: [], true)) {
                 return;
             }
 

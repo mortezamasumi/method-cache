@@ -1,8 +1,8 @@
 <?php
 
-namespace MortezaMasumi\MethodCache\Tests;
+namespace Mortezamasumi\MethodCache\Tests;
 
-use MortezaMasumi\MethodCache\MethodCacheServiceProvider;
+use Mortezamasumi\MethodCache\MethodCacheServiceProvider;
 
 abstract class TestCase extends \Orchestra\Testbench\TestCase
 {
