@@ -13,16 +13,16 @@ class OverrideCacheableMethodClassAction
     public function handle(string $class): void
     {
         $reflection = new ReflectionClass($class);
-        $methods    = $reflection->getMethods();
+        $methods = $reflection->getMethods();
 
         $methodsToOverride = collect($methods)->firstWhere(function ($method) {
             return count($method->getAttributes(Cacheable::class)) > 0;
         });
 
-        $attribute         = $methodsToOverride->getAttributes(Cacheable::class)[0];
+        $attribute = $methodsToOverride->getAttributes(Cacheable::class)[0];
         $cacheableInstance = $attribute->newInstance();
 
-        $keys   = Cache::get('methodcached-keys', []);
+        $keys = Cache::get('methodcached-keys', []);
         $keys[] = $cacheableInstance->key;
         Cache::forever('methodcached-keys', $keys);
 
@@ -30,7 +30,7 @@ class OverrideCacheableMethodClassAction
             return Cache::remember(
                 key: $cacheableInstance->key,
                 ttl: $cacheableInstance->ttl,
-                callback: fn() => $original(),
+                callback: fn () => $original(),
             );
         };
 
@@ -41,17 +41,17 @@ class OverrideCacheableMethodClassAction
             implementations: $methodImplementation,
         );
 
-        $filePath = storage_path('framework/cache/' . $result['className'] . '.php');
+        $filePath = storage_path('framework/cache/'.$result['className'].'.php');
         File::put($filePath, $result['content']);
 
         try {
             require_once $filePath;
-            $className              = $result['className'];
+            $className = $result['className'];
             $overridenClassInstance = new $className($result['implementations']);
         } finally {
             File::delete($filePath);
         }
 
-        app()->bind($class, fn() => $overridenClassInstance);
+        app()->bind($class, fn () => $overridenClassInstance);
     }
 }

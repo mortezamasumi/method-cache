@@ -25,11 +25,11 @@ class MethodCacheServiceProvider extends ServiceProvider
         $this->app->beforeResolving(function ($abstract) {
             $class = is_string($abstract) ? $abstract : get_class($abstract);
 
-            if (!class_exists($class)) {
+            if (! class_exists($class)) {
                 return;
             }
 
-            if (!in_array(HasCacheableMethods::class, class_implements($class) ?: [], true)) {
+            if (! in_array(HasCacheableMethods::class, class_implements($class) ?: [], true)) {
                 return;
             }
 
