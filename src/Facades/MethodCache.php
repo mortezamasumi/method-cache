@@ -3,14 +3,12 @@
 namespace Mortezamasumi\MethodCache\Facades;
 
 use Illuminate\Support\Facades\Facade;
+use Mortezamasumi\MethodCache\MethodCacheService;
 
-/**
- * @see \Mortezamasumi\MethodCache\MethodCache
- */
 class MethodCache extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \Mortezamasumi\MethodCache\MethodCacheService::class;
+        return MethodCacheService::class;
     }
 }

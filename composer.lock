@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3f395a5dca32696aabff1b8d747401b0",
+    "content-hash": "361a875d87d9b9abcb65b19430ff4c67",
     "packages": [
         {
             "name": "mortezamasumi/method-overrider",
-            "version": "dev-main",
+            "version": "v1.1",
             "source": {
                 "type": "git",
-                "url": "git@github.com:mortezamasumi/method-overrider.git",
-                "reference": "eb85e2a521ddd35eca91e4538aa11c2d11e34d1f"
+                "url": "https://github.com/mortezamasumi/method-overrider.git",
+                "reference": "6918970b132f7dec5ea63dda30d86eb4dba0867a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mortezamasumi/method-overrider/zipball/eb85e2a521ddd35eca91e4538aa11c2d11e34d1f",
-                "reference": "eb85e2a521ddd35eca91e4538aa11c2d11e34d1f",
+                "url": "https://api.github.com/repos/mortezamasumi/method-overrider/zipball/6918970b132f7dec5ea63dda30d86eb4dba0867a",
+                "reference": "6918970b132f7dec5ea63dda30d86eb4dba0867a",
                 "shasum": ""
             },
             "require": {
@@ -31,64 +31,33 @@
                 "rector/rector": "^1.2.5",
                 "symfony/var-dumper": "^7.1.4"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "Mortezamasumi\\MethodOverrider\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Tests\\": "tests/"
-                }
-            },
-            "scripts": {
-                "refacto": [
-                    "rector"
-                ],
-                "pint": [
-                    "pint"
-                ],
-                "test:refacto": [
-                    "rector --dry-run"
-                ],
-                "test:lint": [
-                    "pint --test"
-                ],
-                "test:types": [
-                    "phpstan analyse --ansi"
-                ],
-                "test:unit": [
-                    "pest --colors=always --parallel --min=100"
-                ],
-                "test": [
-                    "@test:refacto",
-                    "@test:pint",
-                    "@test:types",
-                    "@test:unit"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "authors": [
                 {
-                    "name": "Christoph Rumpel",
-                    "email": "christoph@christoph-rumpel.com"
+                    "name": "Morteza Masumi",
+                    "email": "morteza.masumi@gmail.com"
                 }
             ],
-            "description": "A PHP package to override methods.",
+            "description": "A PHP package to override methods. it is a clone from Christoph Rumpel package",
             "keywords": [
                 "methods",
                 "overriding",
                 "php"
             ],
             "support": {
-                "source": "https://github.com/mortezamasumi/method-overrider/tree/main",
-                "issues": "https://github.com/mortezamasumi/method-overrider/issues"
+                "issues": "https://github.com/mortezamasumi/method-overrider/issues",
+                "source": "https://github.com/mortezamasumi/method-overrider/tree/v1.1"
             },
-            "time": "2024-11-30T05:30:40+00:00"
+            "time": "2024-11-30T15:28:34+00:00"
         }
     ],
     "packages-dev": [
@@ -3367,13 +3336,13 @@
             ],
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "9.0-dev"
-                },
                 "laravel": {
                     "providers": [
                         "Orchestra\\Canvas\\LaravelServiceProvider"
                     ]
+                },
+                "branch-alias": {
+                    "dev-master": "9.0-dev"
                 }
             },
             "autoload": {
@@ -9314,10 +9283,8 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "dev",
-    "stability-flags": {
-        "mortezamasumi/method-overrider": 20
-    },
+    "minimum-stability": "stable",
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

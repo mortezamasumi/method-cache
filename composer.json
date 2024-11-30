@@ -1,13 +1,15 @@
 {
     "name": "mortezamasumi/method-cache",
     "description": "Cache the result of any method.",
+    "version": "v1.0",
+    "type": "library",
+    "license": "MIT",
     "keywords": [
         "php",
         "laravel",
         "caching"
     ],
     "homepage": "https://github.com/mortezamasumi/method-cache",
-    "license": "MIT",
     "authors": [
         {
             "name": "Morteza Masumi",
@@ -17,7 +19,7 @@
     ],
     "require": {
         "php": "^8.3",
-        "mortezamasumi/method-overrider": "dev-main"
+        "mortezamasumi/method-overrider": "^1.0"
     },
     "require-dev": {
         "laravel/pint": "^1.14",
@@ -53,12 +55,6 @@
             }
         }
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/mortezamasumi/method-overrider"
-        }
-    ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true
 }
