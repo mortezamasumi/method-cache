@@ -1,6 +1,6 @@
 <?php
 
-namespace Mortezamasumi\MethodCache\Commands;
+namespace Mortezamasumi\MethodCache\Console;
 
 use Illuminate\Console\Command;
 use Mortezamasumi\MethodCache\Facades\MethodCache;

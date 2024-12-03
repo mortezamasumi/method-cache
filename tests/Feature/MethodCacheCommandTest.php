@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Cache;
-use Mortezamasumi\MethodCache\Commands\MethodCacheCommand;
+use Mortezamasumi\MethodCache\Console\MethodCacheCommand;
 use Tests\Services\TestService;
 
 it('clears all items cached by our package', function () {
