@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Cache;
-use Mortezamasumi\MethodCache\Tests\Services\TestService;
+use Tests\Services\TestService;
 
 it('caches a specific method', function () {
     // Arrange

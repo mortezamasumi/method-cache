@@ -1,6 +1,6 @@
 <?php
 
-namespace Mortezamasumi\MethodCache\Tests\Services;
+namespace Tests\Services;
 
 use Illuminate\Support\Str;
 use Mortezamasumi\MethodCache\Attributes\Cacheable;

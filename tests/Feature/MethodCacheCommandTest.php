@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Cache;
 use Mortezamasumi\MethodCache\Commands\MethodCacheCommand;
-use Mortezamasumi\MethodCache\Tests\Services\TestService;
+use Tests\Services\TestService;
 
 it('clears all items cached by our package', function () {
     // Arrange
