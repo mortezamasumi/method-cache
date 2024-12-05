@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a46151225f00b2c3d0eba5ed808e4d91",
+    "content-hash": "52da8bae1cc329df7b4b0eacadf02b71",
     "packages": [
         {
             "name": "mortezamasumi/method-overrider",
